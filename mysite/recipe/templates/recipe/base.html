@@ -1,0 +1,81 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+	<title>{{ title }}</title>
+
+	<link rel="stylesheet" href="{% static 'css/homestyles.css' %}">
+  <link rel="stylesheet" href="{% static 'css/aboutstyles.css' %}">
+  <link rel="stylesheet" href="{% static 'css/contactstyles.css' %}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia|Audiowide">
+</head>
+<body>
+  
+  <div  class="container-fluid mx-0">
+	<header id="header-bg">
+		<div id="add">
+    <ul>
+      <li>
+        <a href="{% url 'recipe-signup' %}">Add Recipe</a>
+      </li>
+
+      {% comment %} <li>
+   <a href="">Login</a>
+      </li>
+    </ul>
+  </div> {% endcomment %}
+</div>
+
+    
+  <div id="top-text">
+    <h1 id="title">NutriBucket</h1>
+    <p id="subtitle">Where taste and health go together..</p>
+    </div>
+  </div>
+
+    <nav id="navbar">
+    <ul>
+      <li>
+        <a href="{% url 'recipe-home' %}" style="padding: 0px"><img src="{% static 'img/Screenshot (80).png' %}" height="50px"></a>
+      </li>
+
+      
+
+      <li>
+        <a href="{% url 'recipe-home' %}">Home</a>
+      </li>
+
+      <li>
+        <a href="{% url 'recipe-about' %}">About</a>
+      </li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Categories</a>
+        <div class="dropdown-content">
+          <a href="{% url 'Veg' %}">Vegetarian</a>
+          <a href="{% url 'Non-Veg' %}">Non-Vegetarian</a>
+          <a href="{% url 'Vegan' %}">Vegan</a>
+          <a href="{% url 'Bakery' %}">Bakery</a>         
+        </div>
+      </li>
+      <li>
+        <a href="/contact">Contact</a>
+      </li>
+    </ul>
+      </nav>
+    
+
+	</header>
+
+	<main>
+   
+   {% block main %}{% endblock %}
+
+
+  </main>
+
+	<footer>
+
+      
+  </footer>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{% extends "recipe/base.html" %}
+{% block main %}
+   <div class="container">
+    <h1 class="text-center">It's Cooking Time!!</h1>
+    <p class="text-center">Try your hands on our recipes:</p>
+   </div>
+    {% for record in Recipe %}
+        <div id="thumbnails">
+         <div class="gallery">
+        <a target="_blank" href="{% url 'Recipedetail' record.pk%}" id="images">
+          <img src="https://source.unsplash.com/1600x600/?{{record.Recipe_name}}" alt="Image not available" width="600" height="400">
+        </a>
+        <div class="desc">{{record.Recipe_name}}<br>
+        </div>
+
+    
+
+        <!--
+        <div class="gallery">
+          <a target="_blank" href="img_forest.jpg">
+            <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+          </a>
+          <div class="desc">Add a description of the image here</div>
+        </div>
+
+        <div class="gallery">
+          <a target="_blank" href="img_lights.jpg">
+            <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+          </a>
+          <div class="desc">Add a description of the image here</div>
+        </div>
+
+        <div class="gallery">
+          <a target="_blank" href="img_mountains.jpg">
+            <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+          </a>
+          <div class="desc">Add a description of the image here</div>
+        </div> -->
+        </div>
+    {% endfor %}
+
+{% endblock main %}
+
+

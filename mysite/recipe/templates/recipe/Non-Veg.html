@@ -1,0 +1,18 @@
+{% extends "recipe/base.html" %}
+{% block main %}
+   
+    {% for record in Recipe %}
+    {% if record.Recipe_type == "Non-Veg" %}
+        <div id="thumbnails">
+         <div class="gallery">
+        <a target="_blank" href= "recipe/">
+          <img src="https://source.unsplash.com/1600x600/?{{record.Recipe_name}}" alt="Image not available" width="600" height="400">
+        </a>
+        <div class="desc">{{record.Recipe_name}}<br>
+        </div>
+
+        </div>
+    {% endif %}
+    {% endfor %}
+
+{% endblock main %}

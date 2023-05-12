@@ -1,0 +1,51 @@
+
+
+#msgboxin {
+	float: right;
+	border-radius: 10px;
+	padding:  10px;
+	/* display: inline-block; */
+	position: relative;
+	right: 20px;
+	top: 20px;
+	/* left: -180px; */
+	width: 25%;
+	background-color: black;
+	color: white;
+}
+#Name, #Email, #Message {
+	width:300px;
+}
+
+#welcome-content {
+	display: inline-block;
+	text-align: left;
+	width: 50%;
+	color: black;
+	padding-left: 10px;
+}
+
+#msg {
+	height: 80px;
+	width: 90%;
+}
+
+#name, #email {
+	width: 90%;
+}
+
+#img1, #img2, #img3 {
+	height: 200px;
+	width: 350px;
+	border-radius: 10px;
+}
+
+#img1, #img2 {
+	padding-right: 50px;
+}
+
+#img {
+	padding-top: 200px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
